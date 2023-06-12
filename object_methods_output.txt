@@ -1,0 +1,51 @@
+Printing keys of an object
+[ 'a', 'b', 'c', 'd' ]
+Printing values of an object
+[ 'banana', 'apple', 'papaya', 'Mango' ]
+
+Printing entries of an object
+[
+  [ 'a', 'banana' ],
+  [ 'b', 'apple' ],
+  [ 'c', 'papaya' ],
+  [ 'd', 'Mango' ]
+]
+Printing keys and values of an object
+a ==> banana
+b ==> apple
+c ==> papaya
+d ==> Mango
+Printing keys of an  NFTS object
+[ 'artPieces', 'storeCredits' ]
+
+Printing values of an object
+[
+  [
+    { pieceName: 'Emo Flamingos', price: 30, ownerList: [Array] },
+    { pieceName: 'Where is my bit wallet', price: 100, ownerList: [] }
+  ],
+  1000
+]
+adding a property
+[ 'artPieces', 'storeCredits', 'store' ]
+deleting a property
+[ 'artPieces', 'storeCredits' ]
+mapping through object keys
+artPieces
+storeCredits
+accessing values of first object in ownerList
+Fida Ernest
+23849
+09/13/2021
+accessing values for second object in ownerList
+Eric Karger
+23510
+09/13/2021
+setting value of property price in NFTStore
+50
+getting keys and values present in ownerlist[1]
+name : Eric Karger
+userID : 23510
+purchaseDate : 09/13/2021
+getting a particular value
+Emo Flamingos

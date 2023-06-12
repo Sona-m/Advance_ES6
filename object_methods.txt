@@ -1,0 +1,86 @@
+const fruit = {
+    a: "banana",
+    b : "apple",
+    c: "papaya",
+    d : "Mango" 
+}
+console.log('Printing keys of an object')
+console.log(Object.keys(fruit));
+console.log('\nPrinting values of an object')
+console.log(Object.values(fruit));
+console.log('\nPrinting entries of an object')
+console.log(Object.entries(fruit));
+
+console.log('\nPrinting keys and values of an object')
+for (const[key , value] of Object.entries(fruit)){
+    console.log(`${key} ==> ${value}`)
+}
+
+const NFTStore = {
+  artPieces: [
+    {
+      pieceName: "Emo Flamingos",
+      price: 30,
+      ownerList: [
+        {
+          name: "Fida Ernest",
+          userID: 23849,
+          purchaseDate: "09/13/2021",
+        },
+        {
+          name: "Eric Karger",
+          userID: 23510,
+          purchaseDate: "09/13/2021",
+        },
+      ],
+    },
+    {
+      pieceName: "Where is my bit wallet",
+      price: 100,
+      ownerList: [],
+    },
+  ],
+  storeCredits: 1000,
+};
+
+console.log('\nPrinting keys of an  NFTS object')
+console.log(Object.keys(NFTStore));
+
+console.log('\nPrinting values of an object')
+console.log(Object.values(NFTStore));
+
+console.log('adding a property')
+NFTStore.store = 1;
+console.log(Object.keys(NFTStore));
+
+console.log('deleting a property');
+delete NFTStore.store;
+console.log(Object.keys(NFTStore));
+
+console.log('mapping through object keys')
+Object.keys(NFTStore).map((item) => {
+    console.log(`${item}`)
+})
+
+console.log('accessing values of first object in ownerList')
+Object.values(NFTStore.artPieces[0].ownerList[0]).map((val) => {
+    console.log(`${val}`)
+})
+
+console.log('accessing values for second object in ownerList')
+Object.values(NFTStore.artPieces[0].ownerList[1]).map((val)=> {
+    console.log(`${val}`)
+})
+
+console.log('setting value of property price in NFTStore')
+NFTStore.artPieces[0].price = 50;
+console.log(NFTStore.artPieces[0].price);
+
+console.log('getting keys and values present in ownerlist[1]')
+Object.entries(NFTStore.artPieces[0].ownerList[1]).map((entry) => {
+    console.log(`${entry[0]} : ${entry[1]}`)
+    
+})
+
+console.log('getting a particular value')
+console.log(NFTStore.artPieces[0].pieceName)

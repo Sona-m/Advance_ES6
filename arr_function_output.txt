@@ -1,0 +1,96 @@
+For Each
+1
+2
+3
+4
+5
+
+Map
+1
+2
+3
+4
+5
+Filter
+[ 2, 4 ]
+Reduce
+15
+
+Find
+1
+Find index
+3
+
+Slice
+[ 2, 3, 4 ]
+
+sort
+[ -1, 1, 2, 3, 7 ]
+Concat
+[
+   1, 2, 3, 4, 5,
+  -1, 1, 2, 3, 7
+]
+Fill
+[ 0, 0, 0, 0, 0 ]
+[ 0, 1, 1, 0, 0 ]
+
+Includes
+false
+
+Join
+0-1-1-0-0
+
+Reverse
+[ 0, 0, 1, 1, 0 ]
+
+Push
+6
+[ 0, 0, 1, 1, 0, 18 ]
+
+Pop
+18
+
+Unshift
+[
+  0, 1, 2, 4, 0,
+  0, 1, 1, 0
+]
+
+Shift
+[ 2, 3, 4 ]
+
+indexOf && lastIndexOf
+0
+0
+
+Every
+true
+
+Some
+true
+
+From
+[ '1', '2', '3', '4', '5', '6' ]
+[ 1, 2, 3, 4, 5, 6 ]
+
+isArray
+true
+
+Flat
+[ 1, 2, 3, 4 ]
+
+Filter-Map
+[ 400, 500 ]
+
+Map-Filter
+[ 2000, 3000, 4000, 5000 ]
+
+Split
+[
+  'h', 'o', 'w', ' ', 'a',
+  'r', 'e', ' ', 'y', 'o',
+  'u', ' ', 'd', 'o', 'i',
+  'n', 'g'
+]
+[ 'h', 'o', 'w' ]

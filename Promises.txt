@@ -1,0 +1,89 @@
+// Promise Using Constructor
+// creating a Promise
+const promise = new Promise((resolve,reject) =>{
+    let a =1+1;      // 1+2
+    if(a=== 2){
+        resolve('promise resolved')
+    }else{
+        reject('promise failure')
+    }
+})
+//Consuming Promises using then and catch
+promise.then((message)=>{
+    console.log(message)
+}).catch((error) => {
+    console.log(error)
+})
+//o/p -promise resolved
+
+// Consuming Promises using async-await
+
+async function getData() {
+    try{
+   const res = await promise;
+   console.log(res)
+    }catch(err){
+        console.log(err)
+    }
+}
+getData();
+//o/p- promise resolved
+
+
+
+
+//Promise.all()
+//Fulfills when all of the promises fulfill; rejects when any of the promises rejects.
+
+const promise1 = Promise.resolve(3);
+const promise2 = 42;
+const promise3 = new Promise((resolve, reject) => {
+  resolve(5);
+});
+
+Promise.all([promise1, promise2, promise3]).then((values) => {
+  console.log(values);
+});
+//o/p - [ 3, 42, 5 ]
+
+//Promise.allSettled() - takes an iterable of promises as input and returns a single Promise. This returned promise fulfills when all of the input's promises settle, with an array of objects that describe the outcome of each promise.
+
+const promiseA = Promise.reject(3);
+const promiseB = new Promise((resolve, reject) => resolve(5));
+const promises = [promiseA, promiseB];
+
+Promise.allSettled(promises).
+  then((results)=> results.map((res) => console.log(res)))
+  //o/p - { status: 'rejected', reason: 3 }
+//{ status: 'fulfilled', value: 5 } 
+  
+//The Promise.race()  method takes an iterable of promises as input and returns a single Promise. This returned promise give the value promise that settled in minimum time.
+
+const promiseRace1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, 'one');
+});
+//time-500
+
+/**********************************************Promises in JavaScript************************************/
+
+const promiseRace2 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, 'two');
+});
+//time-100 (min)
+//o/p - two
+
+Promise.race([promiseRace1, promiseRace2]).then((value) => {
+  console.log(value);
+})
+
+//Promise.reject()  method returns a Promise object that is rejected with a given reason.
+
+
+
+const promiseResolve = Promise.resolve(123);
+
+promiseResolve.then((value) => {
+  console.log(value);
+});
+ //o/p - 123
+
